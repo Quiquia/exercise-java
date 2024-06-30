@@ -13,5 +13,8 @@ public class EjercicioScanner {
 
         System.out.println("Mi nombre es " + name + " tengo " + edad);
     }
+
+
+  
     
 }

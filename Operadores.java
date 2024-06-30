@@ -67,7 +67,7 @@ public class Operadores {
         System.out.println(" num1 > num2 && num3 > num4 : " + (num1 > num2 && num3 > num4));
         System.out.println(" num1 > num2 || num3 > num4 : " + (num1 > num2 || num3 > num4));
 
-        // number.close();
+        
     }
     
     
@@ -98,12 +98,13 @@ public class Operadores {
 
         int calcularArea = baseRectangulo * alturaRectangulo;
         int calcularPerimetro = (baseRectangulo + alturaRectangulo) * 2;
-        
+
         System.out.println("El área del rectángulo es: " + calcularArea + "m2");
         System.out.println("El Perímetro del rectángulo es: " + calcularPerimetro + "metros");
 
-
     }
+  
+    
    
     
 
