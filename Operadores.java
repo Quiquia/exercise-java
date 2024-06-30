@@ -74,18 +74,35 @@ public class Operadores {
     public void ExerciseComplem() {
 
         Scanner date = new Scanner(System.in);
-        
+
         int anoNacimiento;
         System.out.print("Ingrese el año de nacimiento : ");
         anoNacimiento = date.nextInt();
         int anoActual = 2024;
 
-
         int calculaEdad = anoActual - anoNacimiento;
         String mayorEdadoMenorEdad = (calculaEdad > 18) ? "Eres mayor de edad" : "Eres menor de edad";
 
         System.out.println("Tienes " + calculaEdad + " años y " + mayorEdadoMenorEdad);
+
+    }
+    
+    public void AreaPerimetroRectangulo() {
+        Scanner areaPerimetro = new Scanner(System.in);
+        int baseRectangulo;
+        int alturaRectangulo;
+        System.out.print("Ingrese la baseRectangulo del rectángulo : ");
+        baseRectangulo = areaPerimetro.nextInt();
+        System.out.print("Ingrese la alturaRectangulo del rectángulo : ");
+        alturaRectangulo = areaPerimetro.nextInt();
+
+        int calcularArea = baseRectangulo * alturaRectangulo;
+        int calcularPerimetro = (baseRectangulo + alturaRectangulo) * 2;
         
+        System.out.println("El área del rectángulo es: " + calcularArea + "m2");
+        System.out.println("El Perímetro del rectángulo es: " + calcularPerimetro + "metros");
+
+
     }
    
     
@@ -98,7 +115,8 @@ public class Operadores {
 
         // operadores.OperationBasic();
         // operadores.OperationComparation();
-        operadores.ExerciseComplem();
+        // operadores.ExerciseComplem();
+        operadores.AreaPerimetroRectangulo();
        
 
     }
