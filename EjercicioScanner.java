@@ -12,9 +12,11 @@ public class EjercicioScanner {
         String name = date.nextLine();
 
         System.out.println("Mi nombre es " + name + " tengo " + edad);
+
+        date.close();
     }
 
 
-  
+
     
 }

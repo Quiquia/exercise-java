@@ -2,12 +2,11 @@ import java.util.Scanner;
 
 public class IfElse {
 
-    public void NumberPositivoNegativo() {
-        Scanner number = new Scanner(System.in);
+    public static void NumberPositivoNegativo(Scanner myScanner) {
         int num;
 
         System.out.println("Ingrese un número : ");
-        num = number.nextInt();
+        num = myScanner.nextInt();
 
         boolean numPositivo = (num > 0);
         boolean numCero = num == 0;
@@ -21,18 +20,16 @@ public class IfElse {
             System.out.println("El número ingresado es negativo ");
         }
 
-        // number.close();
 
 
     }
     
-    public void EstructuraControl() {
-        Scanner letra = new Scanner(System.in);
+    public static void EstructuraControl(Scanner myScanner) {
         int num;
 
         System.out.println("Ingrese un número del 0 al 100: ");
-        num = letra.nextInt();
-        letra.nextLine();
+        num = myScanner.nextInt();
+        myScanner.nextLine();
 
         if (num >= 0 && num <= 100) {
             if (num >= 90) {
@@ -53,21 +50,17 @@ public class IfElse {
 
         }
 
-        // letra.close();
 
     }
-
-    
+   
      public static void main(String[] args) {
-        
-        IfElse exercise = new IfElse();
+        Scanner myScanner = new Scanner(System.in);
 
-        exercise.NumberPositivoNegativo();
-        exercise.EstructuraControl();
+        NumberPositivoNegativo(myScanner);
+        EstructuraControl(myScanner);
+
+        myScanner.close();
         
     }
-
-
-
     
 }

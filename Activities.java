@@ -3,14 +3,13 @@ import java.util.Scanner;
 public class Activities {
 
 
-    public void NumberParImpar() {
+    public static void NumberParImpar(Scanner myScanner) {
 
-        Scanner number = new Scanner(System.in);
         int num;
 
         System.out.println("Ingrese un número : ");
-        num = number.nextInt();
-        number.nextLine();
+        num = myScanner.nextInt();
+        myScanner.nextLine();
         int divisibleEntreDos = (num % 2);
         String numParImpar = (divisibleEntreDos != 0) ? "IMPAR" : "PAR";
 
@@ -18,18 +17,17 @@ public class Activities {
 
     }
     
-     public void Calculator() {
+     public static void Calculator(Scanner myScanner) {
         
-        Scanner date = new Scanner(System.in);
         int num1;
         int num2;
         
 
         System.out.println("Ingrese un número : ");
-        num1 = date.nextInt();
-        date.nextLine();
+        num1 = myScanner.nextInt();
+        myScanner.nextLine();
         System.out.println("Ingrese el segundo número : ");
-        num2 = date.nextInt();
+        num2 = myScanner.nextInt();
 
 
 
@@ -40,7 +38,7 @@ public class Activities {
         System.out.println("3. Multiplicación");
         System.out.println("4. División");
 
-        operation = date.nextInt();
+        operation = myScanner.nextInt();
 
         int result;
 
@@ -63,10 +61,13 @@ public class Activities {
 
     public static void main(String[] args) {
         
-        Activities exercise = new Activities();
+        Scanner myScanner = new Scanner(System.in);
+       
 
-        // exercise.NumberParImpar();
-        exercise.Calculator();
+        // NumberParImpar(myScanner);
+        Calculator(myScanner);
+
+        myScanner.close();
         
     }
     
