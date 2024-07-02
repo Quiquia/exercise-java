@@ -2,17 +2,30 @@ import java.util.Scanner;
 
 public class Operadores {
 
-    public void OperationBasic() {
-        Scanner number = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        Scanner myScanner = new Scanner(System.in);
+        
+        // OperationBasic(myScanner);
+        // OperationComparation(myScanner);
+        // ExerciseComplem(myScanner);
+        AreaPerimetroRectangulo(myScanner);
+
+        myScanner.close();
+
+
+    }
+
+    public static void OperationBasic(Scanner myScanner) {
         
         int num1;
         int num2;
         
         System.out.print("Ingrese el 1ER número : ");
-        num1=  number.nextInt();
-        number.nextLine();
+        num1=  myScanner.nextInt();
+        myScanner.nextLine();
         System.out.print("Ingrese el 2DO número :");
-        num2 = number.nextInt();
+        num2 = myScanner.nextInt();
 
       
 
@@ -31,18 +44,17 @@ public class Operadores {
 
     }
 
-    public void OperationComparation() {
+    public void OperationComparation(Scanner myScanner) {
 
-        Scanner number = new Scanner(System.in);
 
         int num1;
         int num2;
 
         System.out.print("Ingrese el 1er número : ");
-        num1 = number.nextInt();
-        number.nextLine();
+        num1 = myScanner.nextInt();
+        myScanner.nextLine();
         System.out.print("Ingrese el 2do número :");
-        num2 = number.nextInt();
+        num2 = myScanner.nextInt();
 
         System.out.println(" num1  : " + num1);
         System.out.println(" num2  : " + num2);
@@ -59,10 +71,10 @@ public class Operadores {
         int num4;
 
         System.out.print("Ingrese el 3er número : ");
-        num3 = number.nextInt();
-        number.nextLine();
+        num3 = myScanner.nextInt();
+        myScanner.nextLine();
         System.out.print("Ingrese el 4to número : ");
-        num4 = number.nextInt();
+        num4 = myScanner.nextInt();
 
         System.out.println(" num1 > num2 && num3 > num4 : " + (num1 > num2 && num3 > num4));
         System.out.println(" num1 > num2 || num3 > num4 : " + (num1 > num2 || num3 > num4));
@@ -71,13 +83,10 @@ public class Operadores {
     }
     
     
-    public void ExerciseComplem() {
-
-        Scanner date = new Scanner(System.in);
-
+    public static void ExerciseComplem(Scanner myScanner) {
         int anoNacimiento;
         System.out.print("Ingrese el año de nacimiento : ");
-        anoNacimiento = date.nextInt();
+        anoNacimiento = myScanner.nextInt();
         int anoActual = 2024;
 
         int calculaEdad = anoActual - anoNacimiento;
@@ -87,14 +96,13 @@ public class Operadores {
 
     }
     
-    public void AreaPerimetroRectangulo() {
-        Scanner areaPerimetro = new Scanner(System.in);
+    public static void AreaPerimetroRectangulo(Scanner myScanner) {
         int baseRectangulo;
         int alturaRectangulo;
         System.out.print("Ingrese la baseRectangulo del rectángulo : ");
-        baseRectangulo = areaPerimetro.nextInt();
+        baseRectangulo = myScanner.nextInt();
         System.out.print("Ingrese la alturaRectangulo del rectángulo : ");
-        alturaRectangulo = areaPerimetro.nextInt();
+        alturaRectangulo = myScanner.nextInt();
 
         int calcularArea = baseRectangulo * alturaRectangulo;
         int calcularPerimetro = (baseRectangulo + alturaRectangulo) * 2;
@@ -104,23 +112,6 @@ public class Operadores {
 
     }
   
-    
-   
-    
-
-
-
-    public static void main(String[] args) {
-
-        Operadores operadores = new Operadores();
-
-        // operadores.OperationBasic();
-        // operadores.OperationComparation();
-        // operadores.ExerciseComplem();
-        operadores.AreaPerimetroRectangulo();
-       
-
-    }
 
     
 }
