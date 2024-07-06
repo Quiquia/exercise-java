@@ -10,7 +10,10 @@ public class StringLetter {
         // StringConcatenation(myScanner);
         // SubstringExtraction(myScanner);
         // CharacterSearch(myScanner);
-        CharacterReplacement(myScanner);
+        // CharacterReplacement(myScanner);
+        // WhiteSpaceRemoval(myScanner);
+        // ChainComparison(myScanner);
+        LongitudTextWithSpaces(myScanner);
 
         
        // Cerrar el Scanner después de su uso
@@ -24,7 +27,7 @@ public class StringLetter {
         String textWithSpacy = texto.trim();
         int longitud = textWithSpacy.length();
 
-        System.out.println("La palabra tiene: " + longitud + " letras");
+        System.out.println("La palabra tiene: " + longitud + textWithSpacy+" letras");
         System.out.println("La palabra tiene: " + texto.length() + " letras con espacios");
 
 
@@ -83,14 +86,44 @@ public class StringLetter {
         String newPhrase = phrase.replace(character, replaceCharacter);
 
         System.out.println("Frase: " + phrase);
-        System.out.println("New Frase: "+newPhrase);
-        
+        System.out.println("New Frase: " + newPhrase);
 
-
-
-        
-        
     }
+
+    public static void WhiteSpaceRemoval(Scanner myScanner) {
+        System.out.println("Ingrese un frase: ");
+        String phrase = myScanner.nextLine();
+        String textWithSpacy = phrase.trim();
+
+        System.out.println("Frase: " + phrase);
+        System.out.println("Frase sin espacios:" + textWithSpacy);
+
     }
+
+    public static void ChainComparison(Scanner myScanner) {
+        System.out.println("Ingresa primera palabra");
+        String word1 = myScanner.nextLine().toLowerCase();
+        System.out.println("Ingresa segunda palabra");
+        String word2 = myScanner.nextLine().toLowerCase();
+
+        boolean equalWord = word1.equals(word2);
+
+        String text = equalWord ? "Las dos palabras son iguales" : "Las dos palabras son diferentes";
+
+        System.out.println(text);
+
+    }
+
+     public static void LongitudTextWithSpaces(Scanner myScanner) {
+        System.out.println("Ingrese una frase: ");
+        String texto = myScanner.nextLine();
+        String textWithSpacy = texto.replace(" ", "").toLowerCase();
+
+        System.out.println("Frase sin espacios: " + textWithSpacy);
+        System.out.println("Frase inicial: " + texto );
+
+
+    }
+}
     
    
