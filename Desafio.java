@@ -5,7 +5,8 @@ public class Desafio {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
         // Llamar a los métodos para ejecutar la lógica
-        ConversionTemperatureUnits(myScanner);
+        // ConversionTemperatureUnits(myScanner);
+        PasswordValidation(myScanner);
 
         // Cerrar el Scanner después de su uso
         myScanner.close();
@@ -44,4 +45,43 @@ public class Desafio {
 
     }
 
+    public static void PasswordValidation(Scanner myScanner) {
+        System.out.println("Ingrese contraseña de al menos 8 caracteres: ");
+        String password = myScanner.nextLine();
+
+        long lengthPasswor = password.length();
+
+        if (lengthPasswor >= 8) {
+
+            boolean uppercase = false;
+            boolean lowercase = false;
+            boolean number = false;
+            boolean caracterSpecial = false;
+
+            for (char p : password.toCharArray()) {
+                if (Character.isUpperCase(p)) {
+                    uppercase = true;
+                } else if (Character.isLowerCase(p)) {
+                    lowercase = true;
+                } else if (Character.isDigit(p)) {
+                    number = true;
+                } else if (!Character.isLetterOrDigit(p)) {
+                    caracterSpecial = true;
+                }
+            }
+            
+            if (uppercase && lowercase && number && caracterSpecial) {
+                System.out.println("¡Contraseña segura! Cumple con todos los criterios.");
+            } else {
+                System.out.println("Contraseña no segura. Debe tener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.");
+            }
+
+        } else {
+            System.out.println("Contraseña no segura. Debe tener al menos una letra mayúscula y un carácter especial.");
+        }
+
+
+        System.out.println("Tamaño: " + lengthPasswor);
+
+    }
 }
