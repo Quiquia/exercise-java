@@ -1,6 +1,8 @@
+import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
-public class Arrays {
+public class ArraysClass {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
         // Llamar a los métodos para ejecutar la lógica
@@ -8,7 +10,10 @@ public class Arrays {
         // AveragingElements(myScanner);
         // FindingMaximum(myScanner);
         // SearchingItem(myScanner);
-        CopyingElements(myScanner);
+        // CopyingElements(myScanner);
+        // RandomNumber(myScanner);
+        // AddingElementsPositions(myScanner);
+        SortingNamesAlphabetically(myScanner);
 
         // Cerrar el Scanner después de su uso
         myScanner.close();
@@ -109,8 +114,8 @@ public class Arrays {
         int[] arrayExtendido = new int[array.length + 2];
 
         arrayExtendido[0] = array[0];
-        arrayExtendido[1] =array[1] ;
-        arrayExtendido[2] = array[2] ;
+        arrayExtendido[1] = array[1];
+        arrayExtendido[2] = array[2];
 
         // Solicitar al usuario que ingrese dos números para las nuevas posiciones
         System.out.println("Ingrese un número: ");
@@ -131,7 +136,84 @@ public class Arrays {
         System.out.println(arrayExtendido[4]);
         System.out.println(array[1]);
 
+    }
 
+    public static void RandomNumber(Scanner myScanner) {
+
+        int[] arrays = new int[6];
+        int numMax = 10;
+        int numMin = 0;
+        Random rand = new Random();
+
+        for (int i = 0; i < arrays.length; i++) {
+            arrays[i] = rand.nextInt(numMax) + numMin;
+        }
+
+        // Contar la cantidad de elementos pares en el array
+        int cantidadPares = 0;
+        for (int i = 0; i < arrays.length; i++) {
+            if (arrays[i] % 2 == 0) {
+                cantidadPares++;
+            }
+        }
+
+        // Mostrar el array y la cantidad de pares por consola
+        System.out.print("Array: ");
+        for (int i = 0; i < arrays.length; i++) {
+            System.out.print(arrays[i] + " ");
+        }
+        System.out.println("\nCantidad de elementos pares: " + cantidadPares);
+    }
+
+    public static void AddingElementsPositions(Scanner myScanner) {
+        int totalNumbers = 5;
+        int[] num = new int[totalNumbers];
+
+        // Pedir al usuario que ingrese 5 números enteros
+        System.out.printf("Ingrese (%d) números enteros: %n", totalNumbers);
+        for (int i = 0; i < totalNumbers; i++) {
+            System.out.printf("(%d) - Ingresa un número: %n", i + 1);
+            num[i] = myScanner.nextInt();
+        }
+
+        // Suma de los tres números
+        int addNumPares = 0;
+
+        for (int i = 0; i < num.length; i = i + 2) {
+            addNumPares = addNumPares + num[i];
+            System.out.print(num[i] + " ");
+
+        }
+
+        System.out.println("\nSuma de elementos pares: " + addNumPares);
 
     }
+
+    public static void SortingNamesAlphabetically(Scanner myScanner){
+        String[] nombre = new String[4];
+
+        // Pedir al usuario ingresar 4 nombres
+        System.out.printf("Ingrese (%d) nombres: %n", 4);
+        for (int i = 0; i < nombre.length; i++) {
+            System.out.printf("(%d) - Ingresa un nombre: %n", i + 1);
+            nombre[i] = myScanner.nextLine();
+        }
+
+         // Ordenar los nombres alfabéticamente
+         Arrays.sort(nombre);
+        
+         // Imprimir los nombres ordenados
+         System.out.println("nombres ordenados: " + Arrays.toString(nombre));
+
+         
+         // Imprimir los nombres ordenados
+        // System.out.println("Nombres ordenados alfabéticamente:");
+        // for (String name : nombre) {
+        //     System.out.println(name);
+        // }
+
+    }
+
+ 
+
 }
