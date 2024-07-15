@@ -205,15 +205,12 @@ public class ArraysClass {
          // Imprimir los nombres ordenados
          System.out.println("nombres ordenados: " + Arrays.toString(nombre));
 
-         
+
          // Imprimir los nombres ordenados
         // System.out.println("Nombres ordenados alfabéticamente:");
         // for (String name : nombre) {
         //     System.out.println(name);
         // }
-
     }
-
- 
 
 }
