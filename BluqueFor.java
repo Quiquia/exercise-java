@@ -8,7 +8,9 @@ public class BluqueFor {
         // Llamar a los métodos para ejecutar la lógica
         // PrintingItems(myScanner);
         // FindingMinimumValue(myScanner);
-        PrintingItemsReverseOrder(myScanner);
+        // PrintingItemsReverseOrder(myScanner);
+        // InvertirArray(myScanner);
+        CalculateCumulativeSum(myScanner);
 
         // Cerrar el Scanner después de su uso
         myScanner.close();
@@ -48,9 +50,57 @@ public class BluqueFor {
         }
 
         // for( int num : numbers){
-        //     System.out.println(" numeros ordenados: " + num);
+        // System.out.print(" numeros ordenados: " + num);
         // }
     }
 
+    public static void InvertirArray(Scanner myScanner) {
+
+        // Definimos el array de ejemplo
+        int[] array = { 1, 2, 3, 4, 5 };
+
+        // Llamamos a la función para invertir el array
+        // invertirArray(array);
+
+        int n = array.length;
+        // Usamos dos punteros, uno al inicio y otro al final del array
+        int inicio = 0;
+        int fin = n - 1;
+
+        // Intercambiamos los elementos hasta que los punteros se encuentren
+        while (inicio < fin) {
+            // Intercambio de elementos
+            int temp = array[inicio];
+            array[inicio] = array[fin];
+            array[fin] = temp;
+
+            // Movemos los punteros
+            inicio++;
+            fin--;
+        }
+
+        // Imprimimos el array resultante
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
+
+    }
+
+    public static void CalculateCumulativeSum(Scanner myScanner) {
+        // Definimos el array de ejemplo
+        int[] array = { 1, 2, 3, 4, 5 };
+
     
+        // calcular la suma acumulada
+        for (int i = 1; i < array.length; i++) {
+            array[i] = array[i] + array[i - 1];
+        }
+
+        // Imprimimos el array resultante
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
+        
+        
+    }
 }
