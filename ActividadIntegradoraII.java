@@ -134,7 +134,8 @@ public class ActividadIntegradoraII {
     }
 
     
-    public class Oraciones {
+public class Oraciones {
+    
 public static void main(String[] args) {
 Scanner scanner = new Scanner(System.in);
 System.out.println("Por favor escriba una oracion: ");
