@@ -32,10 +32,5 @@ public class CollectionFrameworkHashSet {
 
         System.out.println();
 
-
-
-        
-         
-
     }
 }
