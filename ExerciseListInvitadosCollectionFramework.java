@@ -1,13 +1,13 @@
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class ExerciceListInvitadosCollectionFramework {
+public class ExerciseListInvitadosCollectionFramework {
 
     // HashSet para almacenar los nombres de los invitados
     private HashSet<String> invitados;
     
     //Constructor de la clase
-    public ExerciceListInvitadosCollectionFramework() {
+    public ExerciseListInvitadosCollectionFramework() {
         invitados = new HashSet<>();
     }
     
@@ -47,7 +47,7 @@ public class ExerciceListInvitadosCollectionFramework {
      public static void main(String[] args) {
         
         Scanner myScanner = new Scanner(System.in);
-        ExerciceListInvitadosCollectionFramework registro = new ExerciceListInvitadosCollectionFramework();
+        ExerciseListInvitadosCollectionFramework registro = new ExerciseListInvitadosCollectionFramework();
         int opcion;
 
         do {
